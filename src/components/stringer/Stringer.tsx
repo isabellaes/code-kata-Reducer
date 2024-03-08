@@ -34,6 +34,7 @@ const Stringer = () => {
 
   return (
     <div className="stringer">
+      <h1>Stringer</h1>
       <p>Text: {state?.p}</p>
       <button onClick={() => dispatch({ type: ACTION.ADD, payload: "r" })}>
         Add R

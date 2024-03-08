@@ -3,9 +3,5 @@
   flex-direction: column;
   padding: 1em;
   background-color: aquamarine;
-}
-
-.counter-div button {
-  width: fit-content;
-  padding: 5px;
+  margin: 1em;
 }

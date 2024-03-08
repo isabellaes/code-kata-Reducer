@@ -4,10 +4,10 @@ import Stringer from "./components/stringer/Stringer";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Counter />
       <Stringer />
-    </>
+    </div>
   );
 }
 

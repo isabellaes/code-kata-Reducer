@@ -50,6 +50,7 @@ const Counter = () => {
 
   return (
     <div className="counter-div">
+      <h1>Counter</h1>
       <p>Count: {state.count}</p>
       <button onClick={() => dispatch({ type: ACTION.ADD, payload: 1 })}>
         Increase
