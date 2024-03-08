@@ -6,7 +6,7 @@ const ACTION = {
   REMOVE: "remove",
   RESET: "reset",
   HALVE: "halve",
-  ADD10: "add10",
+  DOUBLE: "double",
 };
 
 type State = {
@@ -32,9 +32,8 @@ const reducer = (state: State, action: Action): State => {
       return { count: (state.count = 0) };
     case ACTION.HALVE:
       return { count: state.count / 2 };
-    case ACTION.ADD10:
-      if (action.payload) return { count: state.count + action.payload };
-      else return { count: state.count + 10 };
+    case ACTION.DOUBLE:
+      return { count: state.count * 2 };
     default:
       return state;
   }
@@ -58,9 +57,13 @@ const Counter = () => {
       <button onClick={() => dispatch({ type: ACTION.REMOVE, payload: 1 })}>
         Decrease
       </button>
+      <button onClick={() => dispatch({ type: ACTION.REMOVE, payload: 10 })}>
+        Remove 10
+      </button>
       <button onClick={() => dispatch({ type: ACTION.RESET })}>Reset</button>
+      <button onClick={() => dispatch({ type: ACTION.DOUBLE })}>Double</button>
       <button onClick={() => dispatch({ type: ACTION.HALVE })}>Halve</button>
-      <button onClick={() => dispatch({ type: ACTION.ADD10, payload: 10 })}>
+      <button onClick={() => dispatch({ type: ACTION.ADD, payload: 10 })}>
         Add 10
       </button>
 
